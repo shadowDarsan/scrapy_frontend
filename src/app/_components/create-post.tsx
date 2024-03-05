@@ -11,8 +11,6 @@ import {
   IoLogoInstagram,
   IoLogoPinterest,
   IoLogoLinkedin,
-  IoMail,
-  IoPhoneLandscape,
   IoLogoTwitter,
   IoLink,
 } from "react-icons/io5";
@@ -58,7 +56,8 @@ export function CreatPost() {
     setLoading(true);
 
     axios
-      .post<ApiResponse>("https://scrapy-6tgl.onrender.com/scrape", {
+      // .post<ApiResponse>("https://scrapy-6tgl.onrender.com/scrape", {
+      .post<ApiResponse>("http://127.0.0.1:5000/scrape", {
         keyword: data.keyword,
         location: data.location,
       })

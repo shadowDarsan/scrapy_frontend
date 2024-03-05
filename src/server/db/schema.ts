@@ -25,7 +25,7 @@ export const scrapper_history = mysqlTable("scrapper_history", {
     .default(sql`CURRENT_TIMESTAMP`)
     .notNull(),
   updatedAt: timestamp("updatedAt").onUpdateNow(),
-  email: varchar("email", { length: 255 }),
+  email: varchar("email", { length: 255 }).unique(),
   phone: varchar("phone", { length: 255 }),
   facebook: varchar("facebook", { length: 255 }),
   instagram: varchar("instagram", { length: 255 }),
